@@ -4,9 +4,10 @@ import { LoginComponent } from './views/login/index.component';
 import { NonfoundComponent } from './views/nonfound/nonfound.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
   { path: 'nonfound', component: NonfoundComponent },
-  { path: '**', redirectTo: 'nonfound' }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
