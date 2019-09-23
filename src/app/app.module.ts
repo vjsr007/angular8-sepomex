@@ -5,7 +5,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './views/login/index.component';
+import { LoginComponent } from './views/login/login.component';
 import { NonfoundComponent } from './views/nonfound/nonfound.component';
 import { HomeComponent } from './views/home';
 import { AlertComponent } from './components/alert';
