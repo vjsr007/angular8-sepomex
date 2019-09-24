@@ -9,7 +9,7 @@ import { LoginComponent } from './views/login/login.component';
 import { NonfoundComponent } from './views/nonfound/nonfound.component';
 import { HomeComponent } from './views/home';
 import { AlertComponent } from './components/alert';
-import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './helpers';
+import { ApiInterceptor, ErrorInterceptor } from './helpers';
 
 @NgModule({
   declarations: [
@@ -26,11 +26,8 @@ import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './helpers
     AppRoutingModule
   ],
   providers: [
-      { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-      { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
-      // provider used to create fake backend
-      fakeBackendProvider
+      { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },
+      { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

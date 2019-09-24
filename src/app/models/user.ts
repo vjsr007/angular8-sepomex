@@ -2,7 +2,7 @@
     id: number;
     username: string;
     password: string;
-    firstName: string;
-    lastName: string;
     token: string;
+    fullname: string;
+    active: boolean;
 }
