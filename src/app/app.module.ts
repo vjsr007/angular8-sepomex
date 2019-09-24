@@ -10,6 +10,7 @@ import { NonfoundComponent } from './views/nonfound/nonfound.component';
 import { HomeComponent } from './views/home';
 import { AlertComponent } from './components/alert';
 import { ApiInterceptor, ErrorInterceptor } from './helpers';
+import { RegisterComponent } from './views/register';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ApiInterceptor, ErrorInterceptor } from './helpers';
     LoginComponent,
     NonfoundComponent,
     HomeComponent,
-    AlertComponent
+    AlertComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

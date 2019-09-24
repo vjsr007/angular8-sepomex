@@ -1,7 +1,7 @@
 ﻿export class User {
     id: number;
     username: string;
-    password: string;
+    pass_field: string;
     token: string;
     fullname: string;
     active: boolean;

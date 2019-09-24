@@ -8,7 +8,7 @@ export class UserService {
     constructor(private http: HttpClient) { }
 
     getAll() {
-        return this.http.get<User[]>(`${config.apiUrl}/user/getall`);
+        return this.http.get<User[]>(`${config.apiUrl}/user/`);
     }
 
     getById(id: number) {
@@ -16,7 +16,7 @@ export class UserService {
     }
 
     register(user: User) {
-        return this.http.post(`${config.apiUrl}/user/register`, user);
+        return this.http.post(`${config.apiUrl}/user/`, user);
     }
 
     update(user: User) {

@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
             username: ['', Validators.required],
-            password: ['', Validators.required]
+            pass_field: ['', Validators.required]
         });
 
         // get return url from route parameters or default to '/'
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-        this.authenticationService.login(this.f.username.value, this.f.password.value)
+        this.authenticationService.login(this.f.username.value, this.f.pass_field.value)
             .pipe(first())
             .subscribe(
                 data => {
