@@ -8,8 +8,8 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="pass_field">pass_field</label>
-        <input type="pass_field" formControlName="pass_field" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pass_field.errors }" />
+        <label for="pass_field">Password</label>
+        <input type="password" formControlName="pass_field" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pass_field.errors }" />
         <div *ngIf="submitted && f.pass_field.errors" class="invalid-feedback">
             <div *ngIf="f.pass_field.errors.required">pass_field is required</div>
         </div>
